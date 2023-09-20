@@ -1,0 +1,21 @@
+words=input("satrni kiriting :")
+ls=words.split()
+st=set()
+for x in ls:
+    st.add(x)
+print(st)
+maxword=st.pop()
+minword=maxword
+
+Max,Min=len(maxword),len(minword)
+
+for x in st:
+    if Max<len(x):
+        Max=len(x)
+        maxword=x
+    if Min>len(x):
+        Min=len(x)
+        minword=x
+
+print(f"max soz {maxword}")
+print(f"min soz {minword}")
